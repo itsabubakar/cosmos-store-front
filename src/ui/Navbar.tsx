@@ -1,0 +1,160 @@
+"use client";
+import { Bag, Care, Close, Logo, Microscope, Open, Person } from "@/assets";
+import Link from "next/link";
+import React, { useState } from "react";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <nav
+      className={`fixed top-0 left-0 w-full   z-10 pt-6 px-4 text-sm shadow-md rounded-xl ${
+        isOpen ? " " : "bg-white/80 backdrop-blur-sm"
+      } `}
+    >
+      {/* Logo */}
+      <div className={`${isOpen ? "hidden " : ""} flex items-center gap-4`}>
+        <div>
+          <Link href="/">
+            <Logo />
+          </Link>
+        </div>
+
+        {/* Cart */}
+        <div className="ml-auto">
+          <Link href="/">
+            <Bag />
+          </Link>
+        </div>
+        <div>
+          <Link href="/">Sign in</Link>
+        </div>
+        {/* Profile */}
+        <div>
+          <Link href="/">
+            <Person />
+          </Link>
+        </div>
+      </div>
+
+      <div className={`pl-1 pt-4 ${isOpen ? "hidden " : ""} `}>
+        {/* Mobile Menu Icon */}
+        <div className="flex justify-between items-center">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-700 hover:text-blue-500 focus:outline-none"
+          >
+            <Open />
+          </button>
+
+          {/* Search bar */}
+          <div className="rounded bg-white p-2 shadow-md border flex justify-between items-center">
+            <input
+              type="text"
+              placeholder="Search Cosmos"
+              className="outline-none bg-transparent"
+            />
+            <Microscope />
+          </div>
+        </div>
+      </div>
+
+      {/* Horizontally scrolling links */}
+      <div
+        className={`overflow-x-auto whitespace-nowrap flex space-x-5 py-4 scrollbar-none ${
+          isOpen ? "hidden " : ""
+        } `}
+      >
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Deals
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Cosmos Basic
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Whats New?
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          About
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Services
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Contact
+        </Link>
+      </div>
+
+      {/* Full-screen Mobile Menu */}
+      <div
+        className={`fixed h-screen bg-white/80 backdrop-blur-lg inset-0 bg-white z-20 flex flex-col space-y-4  transition-transform transition-opacity duration-300 ease-in-out ${
+          isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        }`}
+      >
+        <div>
+          <div className="bg-[#FFFFFF99] shadow-md rounded-br-full w-4/5 p-4">
+            <h2 className="pl-1 font-semibold">Browse</h2>
+            <Link href="/">
+              <Logo />
+            </Link>
+            <Link className="pl-1 font-semibold pt-4 block" href="/">
+              Cosmos Home
+            </Link>
+          </div>
+          <div className="flex justify-between px-4 pt-5">
+            <div className="space-y-2 flex flex-col">
+              <Link
+                className="text-gray-700 hover:text-blue-500 text-lg"
+                href="/"
+              >
+                Home
+              </Link>
+              <Link
+                className="text-gray-700 hover:text-blue-500 text-lg"
+                href="/"
+              >
+                About
+              </Link>
+              <Link
+                className="text-gray-700 hover:text-blue-500 text-lg"
+                href="/"
+              >
+                Services
+              </Link>
+              <Link
+                className="text-gray-700 hover:text-blue-500 text-lg"
+                href="/"
+              >
+                Contact
+              </Link>
+            </div>
+            <div className="bg-red-500 absolute top-0 right-0 h-full p-4 rounded-tl-full bg-[#020202B2]">
+              <button
+                onClick={toggleMenu}
+                className="text-gray-700 hover:text-blue-500 focus:outline-none mt-10"
+              >
+                <Close />
+              </button>
+              {/* Need this vertical and stuck to the right */}
+              <Link
+                href={"/"}
+                className="bg-white text-[9px] absolute w-[130px] top-40 text-black -rotate-90 px-1 justify-between flex rounded-t-md  pb-12"
+              >
+                <p>HOW MAY I HELP YOU</p>
+                <span className="rotate-90 pt-1">
+                  <Care />
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
