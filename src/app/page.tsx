@@ -1,107 +1,40 @@
-"use client";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
 
-// Import Swiper styles
-import "swiper/css";
-// import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper/modules";
-
-export default function Home() {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index) {
-      return '<div class="mt-80">' + (index + 1) + "</div>";
-    },
-  };
+const page = () => {
   return (
-    <div className=" mt-[185px]">
-      <section className="pt-20">
-        <Swiper
-          pagination={pagination}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
-      </section>
-      <p className="mt-20">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
+    <div className="mt-80 bg-green-500">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo
+        recusandae ad, vero commodi eos quisquam obcaecati iusto velit hic
+        adipisci tempora possimus iure esse facilis repellat maiores
+        exercitationem impedit.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo
+        recusandae ad, vero commodi eos quisquam obcaecati iusto velit hic
+        adipisci tempora possimus iure esse facilis repellat maiores
+        exercitationem impedit.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo
+        recusandae ad, vero commodi eos quisquam obcaecati iusto velit hic
+        adipisci tempora possimus iure esse facilis repellat maiores
+        exercitationem impedit.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
-      </p>{" "}
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo
+        recusandae ad, vero commodi eos quisquam obcaecati iusto velit hic
+        adipisci tempora possimus iure esse facilis repellat maiores
+        exercitationem impedit.
+      </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
-      </p>{" "}
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
-      </p>{" "}
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
-      </p>{" "}
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
-      </p>{" "}
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
-      </p>{" "}
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
-      </p>{" "}
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, iure
-        temporibus aspernatur in vero voluptates fugiat. Nihil consequuntur
-        pariatur neque, delectus earum tenetur soluta doloribus nisi repudiandae
-        sit dicta iusto!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo
+        recusandae ad, vero commodi eos quisquam obcaecati iusto velit hic
+        adipisci tempora possimus iure esse facilis repellat maiores
+        exercitationem impedit.
       </p>
     </div>
   );
-}
+};
+
+export default page;

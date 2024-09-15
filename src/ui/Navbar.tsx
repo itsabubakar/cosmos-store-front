@@ -45,18 +45,20 @@ const NavLink = ({
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Menu toggle function
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    console.log("Menu toggled:", isOpen);
   };
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full   z-10 pt-6 px-4 text-sm shadow-md rounded-xl ${
-        isOpen ? " " : "bg-white/80 backdrop-blur-sm"
-      } `}
+      className={`fixed top-0 left-0 w-full z-10 pt-6 px-4 text-sm shadow-md rounded-xl ${
+        isOpen ? "" : "bg-white/80 backdrop-blur-sm"
+      }`}
     >
       {/* Logo */}
-      <div className={`${isOpen ? "hidden " : ""} flex items-center gap-4`}>
+      <div className={`${isOpen ? "hidden" : ""} flex items-center gap-4`}>
         <div>
           <Link href="/">
             <Logo />
@@ -80,11 +82,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className={`pl-1 pt-4 ${isOpen ? "hidden " : ""} `}>
+      <div className={`pl-1 pt-4 ${isOpen ? "hidden" : ""}`}>
         {/* Mobile Menu Icon */}
         <div className="flex justify-between items-center">
           <button
-            onClick={toggleMenu}
+            onClick={toggleMenu} // This should be the correct button to toggle menu
             className="text-gray-700 hover:text-blue-500 focus:outline-none"
           >
             <Open />
@@ -105,8 +107,8 @@ const Navbar = () => {
       {/* Horizontally scrolling links */}
       <div
         className={`overflow-x-auto whitespace-nowrap flex space-x-5 py-4 scrollbar-none ${
-          isOpen ? "hidden " : ""
-        } `}
+          isOpen ? "hidden" : ""
+        }`}
       >
         <Link className="text-gray-700 hover:text-blue-500" href="/">
           Deals
@@ -130,7 +132,7 @@ const Navbar = () => {
 
       {/* Full-screen Mobile Menu */}
       <div
-        className={`fixed h-screen bg-white/80 backdrop-blur-lg inset-0 bg-white z-20 flex flex-col space-y-4  transition-transform transition-opacity duration-300 ease-in-out ${
+        className={`fixed h-screen bg-white/80 backdrop-blur-lg inset-0 z-30 flex flex-col space-y-4 transition-transform transition-opacity duration-300 ease-in-out ${
           isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
       >
@@ -154,10 +156,9 @@ const Navbar = () => {
           </div>
           <div className="flex justify-between px-4 pt-5">
             <div className="space-y-2 flex flex-col">
-              <h3 className=" font-semibold">Trending</h3>
-
+              <h3 className="font-semibold">Trending</h3>
               <NavLink text="Movers & shakers" href="/" icon={Ring} />
-              <h3 className=" font-semibold pt-2">Top Departments</h3>
+              <h3 className="font-semibold pt-2">Top Departments</h3>
               <NavLink text="Home" href="/" icon={Cup} />
               <NavLink text="Health and household" href="/" icon={Health} />
               <NavLink text="Electronics" href="/" icon={Electronics} />
@@ -170,17 +171,17 @@ const Navbar = () => {
               />
               <NavLink text="Office & School Supplies" href="/" icon={Office} />
             </div>
-            <div className="bg-[#020202B2] absolute top-0 right-0 h-full p-4 rounded-tl-full ">
+            <div className="bg-[#020202B2] absolute top-0 right-0 h-full p-4 rounded-tl-full">
               <button
-                onClick={toggleMenu}
+                onClick={toggleMenu} // Ensure this also closes the menu
                 className="text-gray-700 hover:text-blue-500 focus:outline-none mt-10"
               >
                 <Close />
               </button>
-              {/* Need this vertical and stuck to the right */}
+              {/* Vertical button on the right */}
               <Link
                 href={"/"}
-                className="bg-white text-[9px] absolute w-[130px] top-[40%] text-black -rotate-90 px-1 justify-between flex rounded-t-md  pb-12"
+                className="bg-white text-[9px] absolute w-[130px] top-[40%] text-black -rotate-90 px-1 justify-between flex rounded-t-md pb-12"
               >
                 <p>HOW MAY I HELP YOU</p>
                 <span className="rotate-90 pt-1">

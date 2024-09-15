@@ -12,16 +12,16 @@ const Open = () => {
       <path
         d="M1 1H23.8"
         stroke="black"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M1 12.8825L24 13"
         stroke="black"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
     </svg>
   );
