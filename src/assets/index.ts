@@ -17,4 +17,5 @@ export { default as Office } from "./images/office.png";
 export { default as Pc } from "./images/pc.png";
 export { default as Ring } from "./images/ring.png";
 export { default as Shirt } from "./images/shirt.png";
-// export { default as Woman } from "./images/woman.jpg";
+export { default as Woman } from "./images/woman.png";
+export { default as Dot } from "./icons/dot";
