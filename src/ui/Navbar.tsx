@@ -34,7 +34,7 @@ const NavLink = ({
   return (
     <Link
       href={href}
-      className="flex items-center pb-2 gap-x-4 text-gray-700 hover:text-blue-500"
+      className="flex items-center pb-3 gap-x-4 text-gray-700 hover:text-blue-500"
     >
       <Image src={icon} alt="Profile" className="w-6 h-6" />
       <span>{text}</span>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-20 pt-6 px-4 text-sm shadow-md rounded-xl ${
+      className={`fixed  top-0 left-0 w-full z-20 pt-6 px-4 text-sm shadow-md rounded-b-xl ${
         isOpen ? "" : "bg-white/80 backdrop-blur-sm"
       }`}
     >
@@ -93,11 +93,11 @@ const Navbar = () => {
           </button>
 
           {/* Search bar */}
-          <div className="rounded bg-white p-2 shadow-md border flex justify-between items-center">
+          <div className="rounded bg-white p-2 shadow-md border flex justify-between items-center w-[286px]">
             <input
               type="text"
               placeholder="Search Cosmos"
-              className="outline-none bg-transparent"
+              className="outline-none bg-transparent no-underline"
             />
             <Microscope />
           </div>
@@ -123,10 +123,22 @@ const Navbar = () => {
           About
         </Link>
         <Link className="text-gray-700 hover:text-blue-500" href="/">
-          Services
+          Promotions
         </Link>
         <Link className="text-gray-700 hover:text-blue-500" href="/">
-          Contact
+          Super market
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Gift cards
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Zen centre
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Entertainment
+        </Link>
+        <Link className="text-gray-700 hover:text-blue-500" href="/">
+          Social
         </Link>
       </div>
 

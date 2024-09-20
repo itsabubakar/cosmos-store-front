@@ -1,5 +1,5 @@
-- [] change size of search bar
+- [x] change size of search bar
 - [] add transition to close menu
-- [] remove top rounding for navbar
-- [] download dummy images for hero
-- [] build swiper for products
+- [x] remove top rounding for navbar
+- [x] build hero swiper
+- [] remove underline when typing into search bar
