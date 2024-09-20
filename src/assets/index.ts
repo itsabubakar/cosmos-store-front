@@ -6,6 +6,12 @@ export { default as Bag } from "./icons/bag";
 export { default as Microscope } from "./icons/microscope";
 export { default as Care } from "./icons/care";
 export { default as Close } from "./icons/close";
+export { default as Dot } from "./icons/dot";
+export { default as Pause } from "./icons/pause";
+export { default as ChevronDown } from "./icons/chevron-down";
+export { default as Radio } from "./icons/radio";
+export { default as Temperature } from "./icons/temperature";
+export { default as YellowMapIcon } from "./icons/yellow-map-icon";
 
 // images
 export { default as Profile } from "./images/profile.png";
@@ -18,4 +24,4 @@ export { default as Pc } from "./images/pc.png";
 export { default as Ring } from "./images/ring.png";
 export { default as Shirt } from "./images/shirt.png";
 export { default as Woman } from "./images/woman.png";
-export { default as Dot } from "./icons/dot";
+export { default as Doctor } from "./images/doctor.png";

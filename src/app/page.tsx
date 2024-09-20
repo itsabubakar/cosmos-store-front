@@ -1,141 +1,144 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { Carousel, useCarousel } from "nuka-carousel";
 import Image from "next/image";
-import { Dot, Woman } from "@/assets";
+import {
+  Woman,
+  Dot,
+  Pause,
+  Radio,
+  Temperature,
+  ChevronDown,
+  YellowMapIcon,
+  Care,
+  Doctor,
+} from "@/assets";
+import Link from "next/link";
 
-const CustomSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchMove, setTouchMove] = useState(0);
-  const [mouseStart, setMouseStart] = useState(0);
-  const [mouseMove, setMouseMove] = useState(0);
+const Page = () => {
+  const [isPlaying, setIsPlaying] = useState(false); // Control autoplay
 
-  const [ignoreSwipe, setIgnoreSwipe] = useState(false);
+  const CustomDots = () => {
+    const { totalPages, currentPage, goToPage } = useCarousel();
 
-  const togglePlayPause = () => {
-    setIgnoreSwipe(true);
-    setIsPlaying((prev) => !prev);
-  };
+    return (
+      <div className="flex items-center justify-center py-4 gap-2 absolute w-full top-[35%] overflow-hidden">
+        {/* Dots */}
+        <div className="flex gap-1">
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToPage(index)}
+              className="focus:outline-none"
+            >
+              <Dot
+                width={currentPage === index ? 8 : 4}
+                height={currentPage === index ? 8 : 4}
+              />
+            </button>
+          ))}
+        </div>
 
-  const handleTouchEnd = () => {
-    if (ignoreSwipe) {
-      setIgnoreSwipe(false);
-      return;
-    }
-    if (touchStart - touchMove > 50) {
-      handleNextSlide();
-    } else if (touchStart - touchMove < -50) {
-      handlePrevSlide();
-    }
-    setTouchStart(0);
-    setTouchMove(0);
-  };
-
-  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    setMouseStart(e.clientX);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    setMouseMove(e.clientX);
-  };
-
-  const handleMouseUp = () => {
-    if (mouseStart - mouseMove > 50) {
-      handleNextSlide();
-    } else if (mouseStart - mouseMove < -50) {
-      handlePrevSlide();
-    }
-    setMouseStart(0);
-    setMouseMove(0);
-  };
-
-  const totalSlides = 3;
-  const slides = [
-    { id: 1, image: Woman },
-    { id: 2, image: Woman },
-    { id: 3, image: Woman },
-  ];
-
-  useEffect(() => {
-    let interval: NodeJS.Timeout | undefined;
-
-    if (isPlaying) {
-      interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % totalSlides);
-      }, 2000); // Auto-play interval (2 seconds)
-    }
-
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [isPlaying]);
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    setTouchStart(e.touches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    setTouchMove(e.touches[0].clientX);
-  };
-
-  return (
-    <div
-      className="mt-40 relative overflow-hidden"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-    >
-      {/* Slider */}
-      <div
-        className="flex transition-transform duration-500"
-        style={{
-          transform: `translateX(${currentSlide * -100}%)`,
-          width: `${totalSlides * 40}%`,
-        }}
-      >
-        {slides.map((slide) => (
-          <div key={slide.id} className="w-full flex-shrink-0">
-            <Image src={slide.image} content="cover" alt="Woman" />
-          </div>
-        ))}
-      </div>
-
-      {/* Custom Pagination and Play/Pause Button */}
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center items-center gap-2 z-20">
-        {[...Array(totalSlides)].map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className="focus:outline-none"
-          >
-            <Dot
-              width={currentSlide === index ? 8 : 4}
-              height={currentSlide === index ? 8 : 4}
-            />
-          </button>
-        ))}
         {/* Play/Pause Button */}
         <button
           onClick={togglePlayPause}
-          className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-md"
+          className=" flex items-center -mt-1    focus:outline-none"
         >
-          {isPlaying ? "Pause" : "Play"}
+          <Pause />
         </button>
+      </div>
+    );
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying((prev) => !prev);
+  };
+
+  return (
+    <div className="mt-[185px] max-w-6xl mx-auto relative">
+      <div className="flex gap-x-8 absolute top-5 px-4 w-full z-10 ">
+        <div className="flex gap-x-1 items-center">
+          <YellowMapIcon />
+          <p className="text-white text-xs">Deliver to</p>
+          <div className="self-center mt-1">
+            <ChevronDown />
+          </div>
+        </div>
+        <div className="ml-auto">
+          <Radio />
+        </div>
+        <div className="flex text-xs text-white items-center gap-x-1">
+          <Temperature />
+          <p>24c</p>
+        </div>
+      </div>
+
+      <Link
+        href={"/"}
+        className="bg-[#72727240] text-[9px] absolute top-32  -right-12 text-white -rotate-90 w-fit z-10 justify-between flex rounded-t-md py-1 px-2 flex items-center block"
+      >
+        <p className="text-white font-semibold pr-2">HOW MAY I HELP YOU</p>
+        <span className="rotate-90 ">
+          <Care fill="white" />
+        </span>
+      </Link>
+      <Carousel
+        // wrapMode="wrap"
+        autoplay={isPlaying}
+        autoplayInterval={7000} // Set autoplay interval
+        showDots
+        dots={<CustomDots />}
+      >
+        <Image alt="Slide 1" src={Woman} />
+        <Image alt="Slide 2" src={Woman} />
+        <Image alt="Slide 3" src={Woman} />
+        <Image alt="Slide 4" src={Woman} />
+      </Carousel>
+      <div className="absolute top-[38%] w-full px-4">
+        <div className="overflow-x-auto whitespace-nowrap  space-x-5 py-4 scrollbar-none">
+          <Link
+            className="text-[#000000CC]  px-4 py-1  bg-white/80 backdrop-blur-sm rounded-lg inline-block"
+            href="/"
+          >
+            <p className="text-center text-[13px]">Deals</p>
+            {/* Updated Image component with fixed width and height */}
+            <Image
+              alt="Doctor"
+              src={Doctor}
+              width={130}
+              height={136}
+              className="object-cover"
+            />
+          </Link>
+          <Link className="text-gray-700 hover:text-blue-500" href="/">
+            Cosmos Basic
+          </Link>
+          <Link className="text-gray-700 hover:text-blue-500" href="/">
+            Whats New?
+          </Link>
+          <Link className="text-gray-700 hover:text-blue-500" href="/">
+            About
+          </Link>
+          <Link className="text-gray-700 hover:text-blue-500" href="/">
+            Services
+          </Link>
+          <Link className="text-gray-700 hover:text-blue-500" href="/">
+            Contact
+          </Link>
+        </div>
+      </div>
+
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque
+        quas autem enim ex incidunt blanditiis corrupti accusantium excepturi?
+        Iste totam inventore reiciendis? Pariatur eaque dolores officiis cumque
+        explicabo. Dolor? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Officiis eaque quas autem enim ex incidunt blanditiis corrupti
+        accusantium excepturi? Iste totam inventore reiciendis? Pariatur eaque
+        dolores officiis cumque explicabo. Dolor?
       </div>
     </div>
   );
 };
 
-export default CustomSlider;
+export default Page;
