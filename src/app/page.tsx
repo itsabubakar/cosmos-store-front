@@ -1,17 +1,29 @@
 import {
   Apple,
+  BlackShirt,
+  Computer,
   Doctor,
   Earpods,
+  Eateries,
+  Fitness,
   Groceries,
   Laptop,
   Man,
   Scan,
   Shopping,
+  ShoppingWoman,
   Suit,
+  Supermarket,
   Women,
 } from "@/assets";
 import { AuthSection, Hero, Section } from "@/components";
-import { HorizontalLinkVariantOne, ProductSlider } from "@/ui";
+import {
+  HorizontalLinkVariantOne,
+  HorizontalLinkVariantTwo,
+  ProductCard,
+  ProductSlider,
+} from "@/ui";
+import Image from "next/image";
 import React from "react";
 
 const page = () => {
@@ -71,6 +83,79 @@ const page = () => {
           View your browsing history
         </p>
       </Section>
+      <Section heading="Shop by department / category">
+        <div className="flex gap-x-5  overflow-x-auto whitespace-nowrap  pt-8  link-container pb-4">
+          <HorizontalLinkVariantTwo
+            topLink={{
+              title: "Super markets",
+              src: Supermarket,
+              link: "/",
+              quantity: 400,
+            }}
+            bottomLink={{ title: "Other Deals", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantTwo
+            topLink={{
+              title: "Eateries",
+              src: Eateries,
+              link: "/",
+              quantity: 250,
+            }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantTwo
+            topLink={{
+              title: "Sports and fitness",
+              src: Fitness,
+              link: "/",
+              quantity: 250,
+            }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantTwo
+            topLink={{ title: "Deals", src: Women, link: "/" }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantTwo
+            topLink={{ title: "Deals", src: Women, link: "/" }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantTwo
+            topLink={{ title: "Deals", src: Women, link: "/" }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+        </div>
+        <p className="p-4">See all </p>
+      </Section>
+      <Section className="p-4" variant="two">
+        <ProductCard
+          bg="bg-[#F6F05F]"
+          heading="New & exclusive collab"
+          title="Midwest Teen"
+          subtitle="Collection"
+          buttonText="Shop now"
+          src={BlackShirt}
+        />
+        <ProductCard
+          bg="bg-[#FFD700]"
+          heading="Fab prices"
+          title="Wardrobe"
+          subtitle="refresh"
+          buttonText="Shop now"
+          src={ShoppingWoman}
+          text="was    25,000 now 18,000"
+        />
+        <ProductCard
+          largerImage
+          bg="bg-[#F6F05F]"
+          bgTwo="bg-[#F0F0F0DE]"
+          buttonText="Shop now"
+          src={Computer}
+          text="Shop for Computers 
+& Accessories"
+        />
+      </Section>
+
       <Section variant="two" heading="Pick up where you left off">
         <div className="overflow-x-auto whitespace-nowrap  pt-8 scrollbar-none bg-white link-container">
           <HorizontalLinkVariantOne title={"Deals"} src={Women} link="/" />

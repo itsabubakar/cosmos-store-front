@@ -13,6 +13,7 @@ export { default as Radio } from "./icons/radio";
 export { default as Temperature } from "./icons/temperature";
 export { default as YellowMapIcon } from "./icons/yellow-map-icon";
 export { default as Heart } from "./icons/heart";
+export { default as Arrow } from "./icons/arrow";
 
 // images
 export { default as Profile } from "./images/profile.png";
@@ -40,3 +41,10 @@ export { default as Women } from "./images/women.png";
 export { default as Suit } from "./images/suit.png";
 export { default as Shopping } from "./images/shopping.png";
 export { default as Man } from "./images/man.png";
+export { default as DIY } from "./images/diy.png";
+export { default as Eateries } from "./images/eateries.png";
+export { default as Fitness } from "./images/fitness.png";
+export { default as Supermarket } from "./images/supermarket.png";
+export { default as BlackShirt } from "./images/black-shirt.png";
+export { default as ShoppingWoman } from "./images/shopping-woman.png";
+export { default as Computer } from "./images/computer.png";

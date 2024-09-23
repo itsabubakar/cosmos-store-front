@@ -45,6 +45,10 @@ body {
   border-radius: 0 0 15px 0px; /* Bottom-right */
 }
 
-.link-container > a:first-child {
+.link-container > div:first-child {
   margin-left: 40px; /* Adds 20px margin to the left of the first element */
+}
+
+.link-container > div:last-child {
+  margin-right: 40px; /* Adds 20px margin to the left of the first element */
 }
