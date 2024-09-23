@@ -12,6 +12,7 @@ export { default as ChevronDown } from "./icons/chevron-down";
 export { default as Radio } from "./icons/radio";
 export { default as Temperature } from "./icons/temperature";
 export { default as YellowMapIcon } from "./icons/yellow-map-icon";
+export { default as Heart } from "./icons/heart";
 
 // images
 export { default as Profile } from "./images/profile.png";
@@ -31,3 +32,11 @@ export { default as HandBags } from "./images/handbags.png";
 export { default as Pampers } from "./images/pampers.png";
 export { default as Sports } from "./images/sports.png";
 export { default as Watch } from "./images/watch.png";
+export { default as Apple } from "./images/apple.png";
+export { default as Earpods } from "./images/earpods.png";
+export { default as Laptop } from "./images/laptop.png";
+export { default as Scan } from "./images/scan.png";
+export { default as Women } from "./images/women.png";
+export { default as Suit } from "./images/suit.png";
+export { default as Shopping } from "./images/shopping.png";
+export { default as Man } from "./images/man.png";

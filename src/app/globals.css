@@ -19,47 +19,32 @@ body {
   }
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px; /* Adjust gap as needed */
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* First child: top-left rounded */
+.grid-container > div:nth-child(1) {
+  border-radius: 15px 0 0 0; /* Top-left */
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Second child: top-right rounded */
+.grid-container > div:nth-child(2) {
+  border-radius: 0 15px 0 0; /* Top-right */
 }
 
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: #000;
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+/* Third child: bottom-left rounded */
+.grid-container > div:nth-child(3) {
+  border-radius: 0 0 0 15px; /* Bottom-left */
 }
 
-.swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
+/* Fourth child: bottom-right rounded */
+.grid-container > div:nth-child(4) {
+  border-radius: 0 0 15px 0px; /* Bottom-right */
 }
 
-.image-container {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.link-container > a:first-child {
+  margin-left: 40px; /* Adds 20px margin to the left of the first element */
 }

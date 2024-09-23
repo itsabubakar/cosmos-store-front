@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed  top-0 left-0 w-full z-20 pt-6 px-4 text-sm shadow-md rounded-b-xl ${
+      className={`fixed top-0 left-0 w-full z-20 pt-2 px-4 text-sm shadow-md rounded-b-xl ${
         isOpen ? "" : "bg-white/80 backdrop-blur-sm"
       }`}
     >
