@@ -6,7 +6,6 @@ import {
   Earpods,
   Eateries,
   Fitness,
-  Groceries,
   Laptop,
   Man,
   Scan,
@@ -23,7 +22,6 @@ import {
   ProductCard,
   ProductSlider,
 } from "@/ui";
-import Image from "next/image";
 import React from "react";
 
 const page = () => {
