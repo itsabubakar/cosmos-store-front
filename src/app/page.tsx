@@ -4,6 +4,8 @@ import {
   Arrow,
   BlackShirt,
   Computer,
+  ComputerOne,
+  ComputerTwo,
   Cream,
   Doctor,
   Earpods,
@@ -29,10 +31,13 @@ import {
   HorizontalLinkVariantThree,
   HorizontalLinkVariantTwo,
   ProductCard,
+  ProductCardTwo,
   ProductSlider,
+  ProductSliderFour,
   ProductSliderThree,
   ProductSliderTwo,
 } from "@/ui";
+import Image from "next/image";
 import { Carousel, useCarousel } from "nuka-carousel";
 import React from "react";
 
@@ -206,7 +211,12 @@ const page = () => {
       </Section>
 
       <Section className="p-4" heading="New Arrivals">
-        <Carousel dots={<CustomDots />} showDots>
+        <Carousel
+          className="nuka-overflow"
+          swiping={true}
+          dots={<CustomDots />}
+          showDots
+        >
           <div className="min-w-full mx-1">
             <ProductSliderThree
               productImage={VideoImage}
@@ -235,7 +245,7 @@ const page = () => {
       </Section>
 
       <Section variant="two" heading="Deals related to items in your cart">
-        <div className="flex gap-x-5  overflow-x-auto whitespace-nowrap  pt-8  link-container pb-4">
+        <div className="flex gap-x-5 h-[350px] overflow-x-auto   pt-8  link-container">
           <HorizontalLinkVariantThree
             topLink={{
               title: "Super markets",
@@ -328,9 +338,283 @@ const page = () => {
       <Section heading="Massive savings for you">
         <div className="px-3 pt-3  grid-container">
           <ProductSliderTwo imgSrc={[Laptop, Laptop]} />
-          <ProductSliderTwo imgSrc={[Apple, Apple]} autoPlay />
+          <ProductSliderTwo showNewTag imgSrc={[Apple, Apple]} autoPlay />
           <ProductSliderTwo imgSrc={[Scan, Scan]} />
           <ProductSliderTwo imgSrc={[Earpods, Earpods]} />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          See all deals
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <section className="">
+        <Carousel className="nuka-overflow" dots={<CustomDots />} showDots>
+          <div className="bg-[#FFDA5759] p-4">
+            <div className="bg-white flex p-1 min-w-[300px] mx-2 rounded-xl relative">
+              <h3 className="absolute top-1 right-1  text-sm">
+                Shop for Phones <br></br> & Tablets
+              </h3>
+              <Image
+                className=" w-1/2 h-auto object-contain"
+                src={ComputerOne}
+                alt="computer"
+              />
+
+              <Image
+                className="w-1/2 h-auto object-contain mt-8"
+                src={ComputerTwo}
+                alt="computer"
+              />
+            </div>
+          </div>
+          <div className="bg-[#FFDA5759] p-4">
+            <div className="bg-white flex p-1 min-w-[300px] mx-2 rounded-xl relative">
+              <h3 className="absolute top-1 right-1  text-sm">
+                Shop for Phones <br></br> & Tablets
+              </h3>
+
+              <Image
+                className=" w-1/2 h-auto object-contain"
+                src={ComputerOne}
+                alt="computer"
+              />
+
+              <Image
+                className="w-1/2 h-auto object-contain mt-8"
+                src={ComputerTwo}
+                alt="computer"
+              />
+            </div>
+          </div>
+          <div className="bg-[#FFDA5759] p-4">
+            <div className="bg-white flex p-1 min-w-[300px] mx-2 rounded-xl">
+              <Image
+                className=" w-1/2 h-auto object-contain"
+                src={ComputerOne}
+                alt="computer"
+              />
+
+              <Image
+                className="w-1/2 h-auto object-contain"
+                src={ComputerTwo}
+                alt="computer"
+              />
+            </div>
+          </div>
+        </Carousel>
+      </section>
+      <Section
+        heading="Inspired by your recent shopping 
+trends"
+        variant="two"
+      >
+        <Carousel className="nuka-overflow p-5" dots={<CustomDots />} showDots>
+          <div className="min-w-[300px] mr-4">
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Sony Playstation 4 slim 1TB with 2 controlers"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+          </div>
+          <div className="min-w-[300px] mr-4">
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+          </div>
+          <div className="min-w-[300px]">
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+          </div>
+        </Carousel>
+      </Section>
+      <Section
+        heading="Deals inspired by your recent 
+history"
+      >
+        <div className="px-3 pt-3  grid-container">
+          <ProductSliderTwo imgSrc={[Laptop, Laptop]} />
+          <ProductSliderTwo showNewTag imgSrc={[Apple, Apple]} autoPlay />
+          <ProductSliderTwo imgSrc={[Scan, Scan]} />
+          <ProductSliderTwo imgSrc={[Earpods, Earpods]} />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          See all deals
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <section className="">
+        <Carousel className="nuka-overflow" dots={<CustomDots />} showDots>
+          <div className="bg-[#CE3FC83D] p-4">
+            <div className="bg-white flex p-1 min-w-[300px] mx-2 rounded-xl relative">
+              <h3 className="absolute top-1 right-1  text-sm">
+                Shop for Phones <br></br> & Tablets
+              </h3>
+              <Image
+                className=" w-1/2 h-auto object-contain"
+                src={ComputerOne}
+                alt="computer"
+              />
+
+              <Image
+                className="w-1/2 h-auto object-contain mt-8"
+                src={ComputerTwo}
+                alt="computer"
+              />
+            </div>
+          </div>
+          <div className="bg-[#FFDA5759] p-4">
+            <div className="bg-white flex p-1 min-w-[300px] mx-2 rounded-xl relative">
+              <h3 className="absolute top-1 right-1  text-sm">
+                Shop for Phones <br></br> & Tablets
+              </h3>
+
+              <Image
+                className=" w-1/2 h-auto object-contain"
+                src={ComputerOne}
+                alt="computer"
+              />
+
+              <Image
+                className="w-1/2 h-auto object-contain mt-8"
+                src={ComputerTwo}
+                alt="computer"
+              />
+            </div>
+          </div>
+        </Carousel>
+      </section>
+      <Section
+        heading="Inspired by your recent shopping 
+trends"
+        variant="two"
+      >
+        <Carousel className="nuka-overflow p-5" dots={<CustomDots />} showDots>
+          <div className="min-w-[300px] mr-4">
+            <ProductCardTwo
+              price="200"
+              title="Omega Sea master, Oyster perpetual date just."
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Black polo long sleeve shirt, XL, L, M."
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Samsung Galaxy S24 Ultra. Jet black, space gray, Gold"
+              imgSrc={Apple}
+            />
+          </div>
+          <div className="min-w-[300px] mr-4">
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+          </div>
+          <div className="min-w-[300px]">
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+          </div>
+        </Carousel>
+      </Section>
+      <Section heading="Apparel under 5,000">
+        <div className="mx-3 pt-3 rounded-lg  grid grid-cols-2 gap-2 border">
+          <ProductSliderFour title="For Her" imgSrc={[Suit, Suit]} />
+          <ProductSliderFour title="For Him" imgSrc={[Suit, Suit]} autoPlay />
+          <ProductSliderFour title="Teens" imgSrc={[Suit, Suit]} />
+          <ProductSliderFour title="Kiddies" imgSrc={[Suit, Suit]} />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          See all deals
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <Section heading="Shoes under 8,000">
+        <div className="mx-3 pt-3 rounded-lg  grid grid-cols-2 gap-2 border">
+          <ProductSliderFour title="For Her" imgSrc={[Suit, Suit]} />
+          <ProductSliderFour title="For Him" imgSrc={[Suit, Suit]} autoPlay />
+          <ProductSliderFour title="Teens" imgSrc={[Suit, Suit]} />
+          <ProductSliderFour title="Kiddies" imgSrc={[Suit, Suit]} />
         </div>
         <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
           See all deals

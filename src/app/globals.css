@@ -57,3 +57,7 @@ body {
   height: 200px; /* Set your desired height */
   object-fit: cover; /* Maintain aspect ratio */
 }
+
+.nuka-overflow {
+  touch-action: auto !important;
+}

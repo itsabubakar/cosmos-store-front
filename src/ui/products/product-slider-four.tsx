@@ -2,16 +2,15 @@
 import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css"; // Import default styles
-import { Eye } from "@/assets";
 import { StaticImageData } from "next/image";
 
 type Props = {
   autoPlay?: boolean;
   imgSrc: StaticImageData[]; // Accepts an array of StaticImageData
-  showNewTag?: boolean; // New optional prop to control "New" tag visibility
+  title: string;
 };
 
-const ProductSliderTwo = ({ autoPlay, imgSrc, showNewTag }: Props) => {
+const ProductSliderFour = ({ autoPlay, imgSrc, title }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Map through imgSrc and transform it for ImageGallery format
@@ -24,14 +23,7 @@ const ProductSliderTwo = ({ autoPlay, imgSrc, showNewTag }: Props) => {
   };
 
   return (
-    <div className="relative text-center bg-white shadow p-2">
-      {/* "New" Tag - Optional */}
-      {showNewTag && (
-        <div className="absolute top-0 left-0 bg-[#878F8780] text-white text-[10px]  p-1 rounded-sm z-10">
-          New
-        </div>
-      )}
-
+    <div className=" text-center  shadow rounded-lg">
       {/* Image Gallery */}
       <ImageGallery
         items={images} // Use the transformed image array
@@ -46,16 +38,13 @@ const ProductSliderTwo = ({ autoPlay, imgSrc, showNewTag }: Props) => {
         showBullets={false} // Disable default bullets
       />
 
-      {/* Custom Title and Price */}
-      <div className="flex items-center text-[10px] gap-x-2 pb-2">
-        <p className="bg-[#08B02D] text-white font-semibold p-1 rounded-t-sm rounded-bl-sm rounded-br-lg">
-          46% off
-        </p>
-        <p className="">Limited time Deal</p>
+      {/* Custom Title*/}
+      <div className="py-2">
+        <p className="text-sm text-center">{title}</p>
       </div>
 
       {/* Custom Pagination */}
-      <div className="flex justify-center mt-2">
+      <div className="flex justify-center mt-2 pb-2">
         {images.map((_, index) => (
           <div
             key={index}
@@ -69,13 +58,8 @@ const ProductSliderTwo = ({ autoPlay, imgSrc, showNewTag }: Props) => {
           />
         ))}
       </div>
-
-      {/* Eye Icon */}
-      <div className="flex justify-end -mt-3">
-        <Eye />
-      </div>
     </div>
   );
 };
 
-export default ProductSliderTwo;
+export default ProductSliderFour;

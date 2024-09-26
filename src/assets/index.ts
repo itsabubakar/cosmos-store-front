@@ -18,6 +18,7 @@ export { default as Eye } from "./icons/eye";
 export { default as Stars } from "./icons/stars";
 export { default as PlayVid } from "./icons/play-vid";
 export { default as Mute } from "./icons/mute";
+export { default as CartPlus } from "./icons/cart-plus";
 
 // images
 export { default as Profile } from "./images/profile.png";
@@ -56,3 +57,5 @@ export { default as VideoImage } from "./images/product-vid.png";
 export { default as Cream } from "./images/cream.png";
 export { default as WomanWithBags } from "./images/woman-with-bags.png";
 export { default as Glasses } from "./images/glasses.png";
+export { default as ComputerOne } from "./images/computer-one.png";
+export { default as ComputerTwo } from "./images/computer-two.png";
