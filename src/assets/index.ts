@@ -14,6 +14,10 @@ export { default as Temperature } from "./icons/temperature";
 export { default as YellowMapIcon } from "./icons/yellow-map-icon";
 export { default as Heart } from "./icons/heart";
 export { default as Arrow } from "./icons/arrow";
+export { default as Eye } from "./icons/eye";
+export { default as Stars } from "./icons/stars";
+export { default as PlayVid } from "./icons/play-vid";
+export { default as Mute } from "./icons/mute";
 
 // images
 export { default as Profile } from "./images/profile.png";
@@ -48,3 +52,7 @@ export { default as Supermarket } from "./images/supermarket.png";
 export { default as BlackShirt } from "./images/black-shirt.png";
 export { default as ShoppingWoman } from "./images/shopping-woman.png";
 export { default as Computer } from "./images/computer.png";
+export { default as VideoImage } from "./images/product-vid.png";
+export { default as Cream } from "./images/cream.png";
+export { default as WomanWithBags } from "./images/woman-with-bags.png";
+export { default as Glasses } from "./images/glasses.png";

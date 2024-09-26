@@ -1,30 +1,66 @@
+"use client";
 import {
   Apple,
+  Arrow,
   BlackShirt,
   Computer,
+  Cream,
   Doctor,
   Earpods,
   Eateries,
   Fitness,
+  Glasses,
   Laptop,
   Man,
+  Pampers,
   Scan,
   Shopping,
   ShoppingWoman,
   Suit,
   Supermarket,
+  VideoImage,
+  WomanWithBags,
   Women,
 } from "@/assets";
 import { AuthSection, Hero, Section } from "@/components";
 import {
+  HorizontalLinkVariantFour,
   HorizontalLinkVariantOne,
+  HorizontalLinkVariantThree,
   HorizontalLinkVariantTwo,
   ProductCard,
   ProductSlider,
+  ProductSliderThree,
+  ProductSliderTwo,
 } from "@/ui";
+import { Carousel, useCarousel } from "nuka-carousel";
 import React from "react";
 
 const page = () => {
+  const CustomDots = () => {
+    const { totalPages, currentPage, goToPage } = useCarousel();
+
+    const className = (index: number) => {
+      let value =
+        "w-1 h-1 p-0 rounded-full bg-gray-200 border-none cursor-pointer hover:bg-gray-500";
+      if (currentPage === index) {
+        value += " bg-gray-500 hover:bg-gray-500";
+      }
+      return value;
+    };
+
+    return (
+      <div className="flex items-center justify-center py-4 gap-1">
+        {[...Array(totalPages)].map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToPage(index)}
+            className={className(index)}
+          />
+        ))}
+      </div>
+    );
+  };
   return (
     <main>
       <Hero />
@@ -154,6 +190,94 @@ const page = () => {
         />
       </Section>
 
+      <Section heading="Massive savings for you">
+        <div className="px-3 pt-3  grid-container">
+          <ProductSliderTwo imgSrc={[Laptop, Laptop]} />
+          <ProductSliderTwo imgSrc={[Apple, Apple]} autoPlay />
+          <ProductSliderTwo imgSrc={[Scan, Scan]} />
+          <ProductSliderTwo imgSrc={[Earpods, Earpods]} />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          See all deals
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+
+      <Section className="p-4" heading="New Arrivals">
+        <Carousel dots={<CustomDots />} showDots>
+          <div className="min-w-full mx-1">
+            <ProductSliderThree
+              productImage={VideoImage}
+              imgSrc={[Cream, Laptop]}
+            />
+          </div>
+          <div className="min-w-full mx-1">
+            <ProductSliderThree
+              productImage={VideoImage}
+              imgSrc={[Cream, Laptop]}
+            />
+          </div>
+          <div className="min-w-full mx-1">
+            <ProductSliderThree
+              productImage={VideoImage}
+              imgSrc={[Cream, Laptop]}
+            />
+          </div>
+          <div className="min-w-full mx-1">
+            <ProductSliderThree
+              productImage={VideoImage}
+              imgSrc={[Cream, Laptop]}
+            />
+          </div>
+        </Carousel>
+      </Section>
+
+      <Section variant="two" heading="Deals related to items in your cart">
+        <div className="flex gap-x-5  overflow-x-auto whitespace-nowrap  pt-8  link-container pb-4">
+          <HorizontalLinkVariantThree
+            topLink={{
+              title: "Super markets",
+              src: Pampers,
+              link: "/",
+              quantity: 400,
+            }}
+            bottomLink={{ title: "Other Deals", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantThree
+            topLink={{
+              title: "Eateries",
+              src: Eateries,
+              link: "/",
+              quantity: 250,
+            }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantThree
+            topLink={{
+              title: "Sports and fitness",
+              src: Fitness,
+              link: "/",
+              quantity: 250,
+            }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantThree
+            topLink={{ title: "Deals", src: Women, link: "/" }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantThree
+            topLink={{ title: "Deals", src: Women, link: "/" }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+          <HorizontalLinkVariantThree
+            topLink={{ title: "Deals", src: Women, link: "/" }}
+            bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
+          />
+        </div>
+      </Section>
+
       <Section variant="two" heading="Pick up where you left off">
         <div className="overflow-x-auto whitespace-nowrap  pt-8 scrollbar-none bg-white link-container">
           <HorizontalLinkVariantOne title={"Deals"} src={Women} link="/" />
@@ -176,6 +300,44 @@ const page = () => {
           />
           <HorizontalLinkVariantOne title={"Sports"} src={Women} link="/" />
         </div>
+      </Section>
+      <Section className="px-4" variant="two" heading="Exclusive Deals">
+        <div className="overflow-x-auto flex gap-x-4 whitespace-nowrap  pt-8 scrollbar-none bg-white link-container">
+          <HorizontalLinkVariantFour
+            img={WomanWithBags}
+            subtitle="Top Notch Fasionista must haves."
+            title="Comfort  fashion purses"
+          />
+          <HorizontalLinkVariantFour
+            img={Glasses}
+            subtitle="Top Notch Fasionista must haves."
+            title="Comfort  fashion purses"
+          />
+          <HorizontalLinkVariantFour
+            img={WomanWithBags}
+            subtitle="Top Notch Fasionista must haves."
+            title="Comfort  fashion purses"
+          />
+          <HorizontalLinkVariantFour
+            img={Glasses}
+            subtitle="Top Notch Fasionista must haves."
+            title="Comfort  fashion purses"
+          />
+        </div>
+      </Section>
+      <Section heading="Massive savings for you">
+        <div className="px-3 pt-3  grid-container">
+          <ProductSliderTwo imgSrc={[Laptop, Laptop]} />
+          <ProductSliderTwo imgSrc={[Apple, Apple]} autoPlay />
+          <ProductSliderTwo imgSrc={[Scan, Scan]} />
+          <ProductSliderTwo imgSrc={[Earpods, Earpods]} />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          See all deals
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
       </Section>
     </main>
   );
