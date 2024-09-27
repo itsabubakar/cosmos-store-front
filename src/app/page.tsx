@@ -2,6 +2,10 @@
 import {
   Apple,
   Arrow,
+  BeautyFour,
+  BeautyOne,
+  BeautyThree,
+  BeautyTwo,
   BlackShirt,
   Computer,
   ComputerOne,
@@ -10,9 +14,27 @@ import {
   Doctor,
   Earpods,
   Eateries,
+  EssentialsOne,
+  EssentialsThree,
+  EssentialsTwo,
   Fitness,
   Glasses,
+  ImgEight,
+  ImgFive,
+  ImgFour,
+  ImgNine,
+  ImgOne,
+  ImgSeven,
+  ImgSix,
+  ImgThree,
+  ImgTwo,
   Laptop,
+  LogoFive,
+  LogoFour,
+  LogoOne,
+  LogoSix,
+  LogoThree,
+  LogoTwo,
   Man,
   Pampers,
   Scan,
@@ -20,19 +42,27 @@ import {
   ShoppingWoman,
   Suit,
   Supermarket,
+  ToyFive,
+  ToyFour,
+  ToyOne,
+  ToyThree,
+  ToyTwo,
   VideoImage,
   WomanWithBags,
   Women,
 } from "@/assets";
 import { AuthSection, Hero, Section } from "@/components";
 import {
+  HorizontalLinkVariantFive,
   HorizontalLinkVariantFour,
   HorizontalLinkVariantOne,
+  HorizontalLinkVariantSix,
   HorizontalLinkVariantThree,
   HorizontalLinkVariantTwo,
   ProductCard,
   ProductCardTwo,
   ProductSlider,
+  ProductSliderFIve,
   ProductSliderFour,
   ProductSliderThree,
   ProductSliderTwo,
@@ -530,11 +560,7 @@ history"
           </div>
         </Carousel>
       </section>
-      <Section
-        heading="Inspired by your recent shopping 
-trends"
-        variant="two"
-      >
+      <Section heading="Top picks for Nigeria" variant="two">
         <Carousel className="nuka-overflow p-5" dots={<CustomDots />} showDots>
           <div className="min-w-[300px] mr-4">
             <ProductCardTwo
@@ -596,7 +622,21 @@ Double pack"
         </Carousel>
       </Section>
       <Section heading="Apparel under 5,000">
-        <div className="mx-3 pt-3 rounded-lg  grid grid-cols-2 gap-2 border">
+        <div className="mx-3 mt-3 rounded-lg  grid grid-cols-2 gap-2 border">
+          <ProductSliderFIve title="Mens" imgSrc={[Suit, Suit]} />
+          <ProductSliderFIve title="Womens" imgSrc={[Suit, Suit]} autoPlay />
+          <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
+          <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          See all deals
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <Section heading="Shoes under 8,000">
+        <div className="mx-3 mt-3 rounded-lg  grid grid-cols-2 gap-2 border">
           <ProductSliderFour title="For Her" imgSrc={[Suit, Suit]} />
           <ProductSliderFour title="For Him" imgSrc={[Suit, Suit]} autoPlay />
           <ProductSliderFour title="Teens" imgSrc={[Suit, Suit]} />
@@ -609,12 +649,141 @@ Double pack"
           </span>
         </p>
       </Section>
-      <Section heading="Shoes under 8,000">
-        <div className="mx-3 pt-3 rounded-lg  grid grid-cols-2 gap-2 border">
-          <ProductSliderFour title="For Her" imgSrc={[Suit, Suit]} />
-          <ProductSliderFour title="For Him" imgSrc={[Suit, Suit]} autoPlay />
-          <ProductSliderFour title="Teens" imgSrc={[Suit, Suit]} />
-          <ProductSliderFour title="Kiddies" imgSrc={[Suit, Suit]} />
+      <Section variant="two" heading="Discount Electronics">
+        <div className="flex gap-x-0 h-[440px] overflow-x-auto   pt-8  link-container">
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: ImgOne,
+              link: "/",
+            }}
+            bottomLink={{ src: ImgTwo, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: Eateries,
+              link: "/",
+            }}
+            bottomLink={{ src: ImgThree, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: Fitness,
+              link: "/",
+            }}
+            bottomLink={{ src: ImgFour, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ImgFive, link: "/" }}
+            bottomLink={{ src: ImgSix, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ImgSeven, link: "/" }}
+            bottomLink={{ src: ImgOne, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ImgEight, link: "/" }}
+            bottomLink={{ src: ImgNine, link: "/" }}
+          />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          Shop all
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <Section variant="two" heading="Phones under N 40,000">
+        <div className="flex gap-x-0 h-[440px] overflow-x-auto   pt-8  link-container">
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: ImgSix,
+              link: "/",
+            }}
+            bottomLink={{ src: ImgTwo, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: ImgSeven,
+              link: "/",
+            }}
+            bottomLink={{ src: ImgSix, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: ImgSeven,
+              link: "/",
+            }}
+            bottomLink={{ src: ImgTwo, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ImgFive, link: "/" }}
+            bottomLink={{ src: ImgSix, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ImgSix, link: "/" }}
+            bottomLink={{ src: ImgSix, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ImgSix, link: "/" }}
+            bottomLink={{ src: ImgSix, link: "/" }}
+          />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          Shop all
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <Section variant="two" heading="Our favorite Toys">
+        <div className="flex gap-x-0 h-[440px] overflow-x-auto   pt-8  link-container">
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: ToyOne,
+              link: "/",
+            }}
+            bottomLink={{ src: ToyTwo, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: ToyThree,
+              link: "/",
+            }}
+            bottomLink={{ src: ToyFour, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{
+              src: ToyFive,
+              link: "/",
+            }}
+            bottomLink={{ src: ToyOne, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ToyTwo, link: "/" }}
+            bottomLink={{ src: ToyThree, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ToyFour, link: "/" }}
+            bottomLink={{ src: ToyFive, link: "/" }}
+          />
+          <HorizontalLinkVariantFive
+            topLink={{ src: ToyOne, link: "/" }}
+            bottomLink={{ src: ToyTwo, link: "/" }}
+          />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          Shop all
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <Section heading="Fashion trends in shoes">
+        <div className="mx-3 mt-3 rounded-lg  grid grid-cols-2 gap-2 border">
+          <ProductSliderFIve title="Mens" imgSrc={[Suit, Suit]} />
+          <ProductSliderFIve title="Womens" imgSrc={[Suit, Suit]} autoPlay />
+          <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
+          <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
         </div>
         <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
           See all deals
@@ -622,6 +791,169 @@ Double pack"
             <Arrow />
           </span>
         </p>
+      </Section>
+      <Section heading="Health and Beauty Products" variant="two">
+        <div className="grid grid-cols-3 p-4 gap-5 items-center">
+          <Image alt="img" src={BeautyOne} />
+          <Image alt="img" src={BeautyTwo} />
+          <Image alt="img" src={BeautyThree} />
+          <Image alt="img" src={BeautyFour} />
+          <Image alt="img" src={BeautyOne} />
+          <Image alt="img" src={BeautyTwo} />
+          <Image alt="img" src={BeautyThree} />
+          <Image alt="img" src={BeautyFour} />
+          <Image alt="img" src={BeautyOne} />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          Shop all
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+
+      <Section variant="two" heading="Girls’  everyday essentials">
+        <div className="flex gap-x-0 h-[500px] overflow-x-auto   pt-8  link-container">
+          <HorizontalLinkVariantSix
+            topLink={{
+              src: EssentialsOne,
+              link: "/",
+              logo: LogoOne,
+            }}
+            bottomLink={{ src: EssentialsOne, link: "/", logo: LogoTwo }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{
+              src: EssentialsTwo,
+              link: "/",
+              logo: LogoThree,
+            }}
+            bottomLink={{ src: EssentialsThree, link: "/" }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{
+              src: EssentialsTwo,
+              link: "/",
+            }}
+            bottomLink={{ src: EssentialsTwo, link: "/" }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{ src: EssentialsOne, link: "/" }}
+            bottomLink={{ src: EssentialsTwo, link: "/" }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{ src: EssentialsThree, link: "/" }}
+            bottomLink={{ src: EssentialsOne, link: "/" }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{ src: EssentialsTwo, link: "/" }}
+            bottomLink={{ src: EssentialsThree, link: "/" }}
+          />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          Shop all
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <Section variant="two" heading="Best sellers in electronics">
+        <div className="flex gap-x-0 h-[500px] overflow-x-auto   pt-8  link-container">
+          <HorizontalLinkVariantSix
+            topLink={{
+              src: ImgOne,
+              link: "/",
+              logo: LogoFour,
+            }}
+            bottomLink={{ src: ImgTwo, link: "/", logo: LogoFive }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{
+              src: ImgThree,
+              link: "/",
+              logo: LogoSix,
+            }}
+            bottomLink={{ src: ImgFour, link: "/" }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{
+              src: ImgFive,
+              link: "/",
+            }}
+            bottomLink={{ src: ImgSix, link: "/" }}
+          />
+          <HorizontalLinkVariantSix
+            topLink={{ src: ImgSeven, link: "/" }}
+            bottomLink={{ src: ImgOne, link: "/" }}
+          />
+        </div>
+        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
+          Shop all
+          <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <Arrow />
+          </span>
+        </p>
+      </Section>
+      <Section heading="Popular products in beauty" variant="two">
+        <Carousel className="nuka-overflow p-5" dots={<CustomDots />} showDots>
+          <div className="min-w-[300px] mr-4">
+            <ProductCardTwo
+              price="200"
+              title="Omega Sea master, Oyster perpetual date just."
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Black polo long sleeve shirt, XL, L, M."
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Samsung Galaxy S24 Ultra. Jet black, space gray, Gold"
+              imgSrc={Apple}
+            />
+          </div>
+          <div className="min-w-[300px] mr-4">
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+          </div>
+          <div className="min-w-[300px]">
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+            <ProductCardTwo
+              price="200"
+              title="Cosmos Basics Kellogs crunchy nuts
+Double pack"
+              imgSrc={Apple}
+            />
+          </div>
+        </Carousel>
       </Section>
     </main>
   );

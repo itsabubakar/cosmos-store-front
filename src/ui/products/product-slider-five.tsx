@@ -10,7 +10,7 @@ type Props = {
   title: string;
 };
 
-const ProductSliderFour = ({ autoPlay, imgSrc, title }: Props) => {
+const ProductSliderFIve = ({ autoPlay, imgSrc, title }: Props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Map through imgSrc and transform it for ImageGallery format
@@ -23,7 +23,7 @@ const ProductSliderFour = ({ autoPlay, imgSrc, title }: Props) => {
   };
 
   return (
-    <div className=" text-center  shadow rounded-lg">
+    <div className=" text-center  rounded-lg">
       {/* Image Gallery */}
       <ImageGallery
         items={images} // Use the transformed image array
@@ -39,7 +39,7 @@ const ProductSliderFour = ({ autoPlay, imgSrc, title }: Props) => {
       />
 
       {/* Custom Title*/}
-      <div className="py-2">
+      <div className="pb-2 border-l  mt-4">
         <p className="text-sm text-center">{title}</p>
       </div>
 
@@ -62,4 +62,4 @@ const ProductSliderFour = ({ autoPlay, imgSrc, title }: Props) => {
   );
 };
 
-export default ProductSliderFour;
+export default ProductSliderFIve;

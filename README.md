@@ -11,3 +11,8 @@
 - [] increase spacing on navbar items
 - [] smoothen slide
 - [] add inter font
+- [] round space bar more
+  -[] 46 percent off hight short
+  - shop by categories fix heights
+  - fix blue arrow size
+  - border on new arrivals
