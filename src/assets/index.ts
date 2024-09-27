@@ -19,6 +19,8 @@ export { default as Stars } from "./icons/stars";
 export { default as PlayVid } from "./icons/play-vid";
 export { default as Mute } from "./icons/mute";
 export { default as CartPlus } from "./icons/cart-plus";
+export { default as BlackStar } from "./icons/black-star";
+export { default as Microphone } from "./icons/microphone";
 
 // images
 export { default as Profile } from "./images/profile.png";
@@ -86,3 +88,17 @@ export { default as LogoThree } from "./images/logothree.png";
 export { default as LogoFour } from "./images/logofour.png";
 export { default as LogoFive } from "./images/logofive.png";
 export { default as LogoSix } from "./images/logosix.png";
+export { default as TV } from "./images/gianttv.png";
+export { default as CosmosSlick } from "./images/cosmoswear.png";
+export { default as Lenovo } from "./images/lenovo.png";
+export { default as Chanel } from "./images/chanel.png";
+export { default as Reebok } from "./images/reebok.png";
+export { default as Meds } from "./images/meds.png";
+export { default as ToysBg } from "./images/toys-bg.png";
+export { default as KitchenOne } from "./images/kitchen3.png";
+export { default as KitchenTwo } from "./images/kitchen2.png";
+export { default as KitchenThree } from "./images/kitchen1.png";
+export { default as CouchOne } from "./images/couch1.png";
+export { default as CouchTwo } from "./images/couch2.png";
+export { default as CouchThree } from "./images/couch3.png";
+export { default as CouchFour } from "./images/couch4.png";

@@ -7,6 +7,7 @@ import {
   Electronics,
   Health,
   Logo,
+  Microphone,
   Microscope,
   Music,
   Office,
@@ -93,11 +94,14 @@ const Navbar = () => {
           </button>
 
           {/* Search bar */}
-          <div className="rounded bg-white p-2 shadow-md border flex justify-between items-center w-[286px]">
+          <div className="rounded bg-white px-2 shadow-md border flex justify-between items-center w-[286px]">
+            <div className="">
+              <Microphone />
+            </div>
             <input
               type="text"
               placeholder="Search Cosmos"
-              className="outline-none bg-transparent no-underline"
+              className="outline-none w-[110px] text-xs  py-2  bg-transparent no-underline"
             />
             <Microscope />
           </div>
