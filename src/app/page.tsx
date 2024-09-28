@@ -325,32 +325,32 @@ const page = () => {
         </p>
       </Section>
 
-      <Section className="p-4" heading="New Arrivals">
+      <Section className="" heading="New Arrivals">
         <Carousel
           className="nuka-overflow"
           swiping={true}
           dots={<CustomDots />}
           showDots
         >
-          <div className="min-w-full mx-1">
+          <div className="min-w-full mx-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
             />
           </div>
-          <div className="min-w-full mx-1">
+          <div className="min-w-full mx-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
             />
           </div>
-          <div className="min-w-full mx-1">
+          <div className="min-w-full mx-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
             />
           </div>
-          <div className="min-w-full mx-1">
+          <div className="min-w-full mx-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
@@ -360,7 +360,7 @@ const page = () => {
       </Section>
 
       <Section variant="two" heading="Deals related to items in your cart">
-        <div className="flex gap-x-5 h-[350px] overflow-x-auto   pt-8  link-container">
+        <div className="flex gap-x-5 h-[450px] items-center overflow-x-auto    link-container">
           <HorizontalLinkVariantThree
             topLink={{
               title: "Super markets",

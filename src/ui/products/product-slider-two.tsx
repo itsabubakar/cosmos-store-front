@@ -47,7 +47,7 @@ const ProductSliderTwo = ({ autoPlay, imgSrc, showNewTag }: Props) => {
       />
 
       {/* Custom Title and Price */}
-      <div className="flex items-center text-[10px] gap-x-2 pb-2">
+      <div className="flex items-start text-[10px] gap-x-2 pb-2">
         <p className="bg-[#08B02D] text-white font-semibold p-1 rounded-t-sm rounded-bl-sm rounded-br-lg">
           46% off
         </p>

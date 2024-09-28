@@ -39,7 +39,7 @@ const HorizontalLinkVariantTwo = ({
 
         {/* Quantity Badge for Top Link */}
         {topLink.quantity && (
-          <span className="absolute top-0 -right-5 bg-white text-[#2B9FE1] text-xs rounded-full px-2 py-1">
+          <span className="absolute top-0 -right-5 bg-white text-[#2B9FE1] text-[13px] rounded-full px-2 py-1">
             {topLink.quantity}
           </span>
         )}

@@ -16,11 +16,7 @@ const HorizontalLinkVariantFour = ({
       {/* Video Ad Section */}
       <div className="relative ">
         {/* Product Image */}
-        <Image
-          src={img}
-          alt="Product"
-          className="w-full h-full object-cover rounded-lg"
-        />
+        <Image src={img} alt="Product" className="w-full h-full object-cover" />
 
         {/* Play Button (Centered) */}
         <div className="absolute  inset-0 flex items-center justify-center">

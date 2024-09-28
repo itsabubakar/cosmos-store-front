@@ -35,7 +35,7 @@ const NavLink = ({
   return (
     <Link
       href={href}
-      className="flex items-center pb-3 gap-x-4 text-gray-700 hover:text-blue-500"
+      className="flex items-center pb-4 gap-x-4 text-gray-700 hover:text-blue-500"
     >
       <Image src={icon} alt="Profile" className="w-6 h-6" />
       <span>{text}</span>
@@ -197,7 +197,7 @@ const Navbar = () => {
               {/* Vertical button on the right */}
               <Link
                 href={"/"}
-                className="bg-white text-[9px] absolute w-[130px] top-[40%] text-black -rotate-90 px-1 justify-between flex rounded-t-md pb-12"
+                className="bg-white text-[9px] absolute w-[130px] top-[40%] text-black -rotate-90 px-1 justify-between flex  rounded-t-md pb-16"
               >
                 <p>HOW MAY I HELP YOU</p>
                 <span className="rotate-90 pt-1">

@@ -7,7 +7,7 @@ const AuthSection = () => {
     <div className="px-4 py-7 text-center">
       <h3 className="pb-4">Sign in to get the best experience</h3>
       <Link
-        className=" rounded-xl mb-3 py-2 items-center shadow-md bg-gradient-to-t from-[rgba(254,231,105,0.9)] via-[rgba(254,216,19,0.9)] to-transparent font-medium flex justify-center gap-x-2 "
+        className="rounded-xl mb-3 py-2 items-center shadow-[0px_2px_3px_0px_rgba(0,0,0,0.25)] bg-[#FED813] font-medium flex justify-center gap-x-2"
         href="/"
       >
         Sign in <Person width="14" />
