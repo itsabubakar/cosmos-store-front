@@ -32,7 +32,7 @@ const HorizontalLink = ({
 }) => {
   return (
     <Link
-      className="text-[#000000CC]  px-1 py-1  bg-white/80 backdrop-blur-sm rounded-lg inline-block mx-1 h-[175px]"
+      className="text-[#000000CC] w-[139px] px-1 py-1  bg-white/80 backdrop-blur-sm rounded-lg inline-block mx-1 h-[175px]"
       href={link}
     >
       <p className="text-center text-[13px] font-medium pb-1">{title}</p>
@@ -108,7 +108,7 @@ const Hero = () => {
 
       <Link
         href={"/"}
-        className="bg-[#72727240] text-[9px] absolute top-32  -right-12 text-white -rotate-90 w-fit z-10 justify-between flex rounded-t-md py-1 px-2 items-center"
+        className="bg-[#72727240] text-[9px] absolute top-40  -right-14 text-white -rotate-90 w-fit z-10 justify-between flex rounded-t-md py-1 px-2 items-center"
       >
         <p className="text-white font-semibold pr-2">HOW MAY I HELP YOU</p>
         <span className="rotate-90 ">

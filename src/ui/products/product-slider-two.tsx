@@ -47,11 +47,11 @@ const ProductSliderTwo = ({ autoPlay, imgSrc, showNewTag }: Props) => {
       />
 
       {/* Custom Title and Price */}
-      <div className="flex items-start text-[10px] gap-x-2 pb-2">
-        <p className="bg-[#08B02D] text-white font-semibold p-1 rounded-t-sm rounded-bl-sm rounded-br-lg">
+      <div className="flex items-start text-[10px] gap-x-2 pb-2 ">
+        <p className="absolute left-0 bg-[#08B02D] text-white w-[50px] font-semibold p-1 rounded-t-sm rounded-bl-sm rounded-br-lg">
           46% off
         </p>
-        <p className="">Limited time Deal</p>
+        <p className="mx-auto text-[#08B02D] font-medium pl-4">Limited time Deal</p>
       </div>
 
       {/* Custom Pagination */}

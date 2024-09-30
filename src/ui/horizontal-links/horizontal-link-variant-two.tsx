@@ -57,7 +57,7 @@ const HorizontalLinkVariantTwo = ({
           height={136}
           className="object-cover rounded-full"
         />
-        <p className="text-center text-[10px] font-medium pb-1 pt-2">
+        <p className="text-center text-[13px] font-medium pb-1 pt-2">
           {bottomLink.title}
         </p>
 

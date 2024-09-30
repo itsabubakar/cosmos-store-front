@@ -102,10 +102,10 @@ const page = () => {
   }) => {
     return (
       <Link
-        className="text-[#000000CC]     bg-white/80 backdrop-blur-sm rounded-lg inline-block relative mx-1 ml-2"
+        className="text-[#000000CC] w-[148px] bg-white/80 backdrop-blur-sm rounded-lg inline-block relative mx-1 ml-2"
         href={link}
       >
-        <div className="absolute top-1 right-1">
+        <div className="absolute top-1 right-1 bg-[#FFFFFF33] rounded-full pl-2 pt-2">
           <CartPlus />
         </div>
         <div className="p-1 flex justify-center">
@@ -209,7 +209,12 @@ const page = () => {
             title="Apple I macc11 Gaming..."
           />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4">See more</p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        See more 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section variant="two" heading="Keep shopping for">
         <div className="overflow-x-auto whitespace-nowrap pt-8  scrollbar-none bg-white  link-container">
@@ -238,7 +243,7 @@ const page = () => {
         </p>
       </Section>
       <Section heading="Shop by department / category">
-        <div className="flex gap-x-5  overflow-x-auto whitespace-nowrap  pt-8  link-container pb-4">
+        <div className="flex gap-x-5  overflow-x-auto whitespace-nowrap h-[280px]  pt-8  link-container pb-4">
           <HorizontalLinkVariantTwo
             topLink={{
               title: "Super markets",
@@ -279,9 +284,14 @@ const page = () => {
             bottomLink={{ title: "Groceries", src: Suit, link: "/" }}
           />
         </div>
-        <p className="p-4">See all </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-4">
+        See more 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
-      <Section className="p-4" variant="two">
+      <Section className="m-4" variant="two">
         <ProductCard
           bg="bg-[#F6F05F]"
           heading="New & exclusive collab"
@@ -317,12 +327,12 @@ const page = () => {
           <ProductSliderTwo imgSrc={[Scan, Scan]} />
           <ProductSliderTwo imgSrc={[Earpods, Earpods]} />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          See all deals
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        See all deals 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
 
       <Section className="" heading="New Arrivals">
@@ -331,26 +341,27 @@ const page = () => {
           swiping={true}
           dots={<CustomDots />}
           showDots
+          
         >
-          <div className="min-w-full mx-4">
+          <div className="min-w-full px-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
             />
           </div>
-          <div className="min-w-full mx-4">
+          <div className="min-w-full px-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
             />
           </div>
-          <div className="min-w-full mx-4">
+          <div className="min-w-full px-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
             />
           </div>
-          <div className="min-w-full mx-4">
+          <div className="min-w-full px-4">
             <ProductSliderThree
               productImage={VideoImage}
               imgSrc={[Cream, Laptop]}
@@ -426,7 +437,7 @@ const page = () => {
           <HorizontalLinkVariantOne title={"Sports"} src={Women} link="/" />
         </div>
       </Section>
-      <Section className="px-4" variant="two" heading="Exclusive Deals">
+      <Section className="" variant="two" heading="Exclusive Deals">
         <div className="overflow-x-auto flex gap-x-4 whitespace-nowrap  pt-8 scrollbar-none bg-white link-container">
           <HorizontalLinkVariantFour
             img={WomanWithBags}
@@ -457,12 +468,12 @@ const page = () => {
           <ProductSliderTwo imgSrc={[Scan, Scan]} />
           <ProductSliderTwo imgSrc={[Earpods, Earpods]} />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          See all deals
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        See all deals 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <section className="">
         <Carousel className="nuka-overflow" dots={<CustomDots />} showDots>
@@ -597,12 +608,12 @@ history"
           <ProductSliderTwo imgSrc={[Scan, Scan]} />
           <ProductSliderTwo imgSrc={[Earpods, Earpods]} />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          See all deals
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        See all deals 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <section className="">
         <Carousel className="nuka-overflow" dots={<CustomDots />} showDots>
@@ -713,12 +724,12 @@ Double pack"
           <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
           <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          See all deals
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        See all deals 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section heading="Shoes under 8,000">
         <div className="mx-3 mt-3 rounded-lg  grid grid-cols-2 gap-2 border">
@@ -727,12 +738,12 @@ Double pack"
           <ProductSliderFour title="Teens" imgSrc={[Suit, Suit]} />
           <ProductSliderFour title="Kiddies" imgSrc={[Suit, Suit]} />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          See all deals
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        See all deals 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section variant="two" heading="Discount Electronics">
         <div className="flex gap-x-0 h-[440px] overflow-x-auto   pt-8  link-container">
@@ -770,12 +781,12 @@ Double pack"
             bottomLink={{ src: ImgNine, link: "/" }}
           />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          Shop all
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        Shop all
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section variant="two" heading="Phones under N 40,000">
         <div className="flex gap-x-0 h-[440px] overflow-x-auto   pt-8  link-container">
@@ -813,12 +824,12 @@ Double pack"
             bottomLink={{ src: ImgSix, link: "/" }}
           />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          Shop all
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        Shop all
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section variant="two" heading="Our favorite Toys">
         <div className="flex gap-x-0 h-[440px] overflow-x-auto   pt-8  link-container">
@@ -856,12 +867,12 @@ Double pack"
             bottomLink={{ src: ToyTwo, link: "/" }}
           />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          Shop all
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        Shop all
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section heading="Fashion trends in shoes">
         <div className="mx-3 mt-3 rounded-lg  grid grid-cols-2 gap-2 border">
@@ -870,12 +881,12 @@ Double pack"
           <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
           <ProductSliderFIve title="Kiddies" imgSrc={[Suit, Suit]} />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          See all deals
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        See all deals 
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section heading="Health and Beauty Products" variant="two">
         <div className="grid grid-cols-3 p-4 gap-5 items-center">
@@ -889,12 +900,12 @@ Double pack"
           <Image alt="img" src={BeautyFour} />
           <Image alt="img" src={BeautyOne} />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          Shop all
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        Shop all
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
 
       <Section variant="two" heading="Girls’  everyday essentials">
@@ -935,12 +946,12 @@ Double pack"
             bottomLink={{ src: EssentialsThree, link: "/" }}
           />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          Shop all
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        Shop all
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section variant="two" heading="Best sellers in electronics">
         <div className="flex gap-x-0 h-[500px] overflow-x-auto   pt-8  link-container">
@@ -972,12 +983,12 @@ Double pack"
             bottomLink={{ src: ImgOne, link: "/" }}
           />
         </div>
-        <p className="text-xs font-semibold pl-4 pt-5 pb-4 flex items-center  gap-x-2">
-          Shop all
-          <span className="bg-[#2B9FE1] p-1 rounded-full">
-            <Arrow />
-          </span>
-        </p>
+        <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2 px-5">
+        Shop all
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
+              <Arrow />
+            </span>
+          </p>
       </Section>
       <Section heading="Popular products in beauty" variant="two">
         <Carousel className="nuka-overflow p-5" dots={<CustomDots />} showDots>
@@ -1043,8 +1054,8 @@ Double pack"
       <Section variant="two" heading="Store Deals">
         <div className="px-5">
           <Image alt="" src={TV} />
-          <div className="flex items-center text-[11px] gap-x-2 pt-4">
-            <p className="bg-[#08B02D] text-white font-semibold p-1 rounded-t-sm rounded-bl-sm rounded-br-lg">
+          <div className="flex items-center text-[11px] gap-x-2 pt-4 relative">
+            <p className="bg-[#08B02D] absolute  text-white font-semibold p-1 rounded-t-sm rounded-bl-sm rounded-br-lg">
               46% off
             </p>
             <p className="">Limited time Deal</p>
@@ -1060,7 +1071,7 @@ Double pack"
           <p className="text-xs pt-2">LG signature 8k TV</p>
           <p className="text-xs font-semibold pt-5 pb-4 flex items-center  gap-x-2">
             Shop the LG store
-            <span className="bg-[#2B9FE1] p-1 rounded-full">
+            <span className="bg-[#2B9FE1] p-1 w-[29px] flex items-center justify-center h-[29px] rounded-full">
               <Arrow />
             </span>
           </p>
@@ -1068,7 +1079,7 @@ Double pack"
       </Section>
       <Section variant="two" heading="Home and kitchen under  N 5000">
         <div>
-          <div className="flex justify-center px-3 pt-3 mb-4">
+          <div className="flex justify-center px-3 pt-3">
             <Image className="w-full" src={KitchenOne} alt="" />
           </div>
           <div className="flex flex-row gap-x-0 overflow-x-auto  scrollbar-none  link-container">
@@ -1086,7 +1097,7 @@ Double pack"
       </Section>
       <Section variant="two" heading="Toys under N 3000">
         <div className="relative p-3">
-          <button className="absolute bg-[#FFFFFFF0] px-4 py-1 text-xs top-4 left-4 rounded-3xl">
+          <button className="absolute bg-[#FFFFFFF0] px-4 py-1 text-xs top-6 left-6 rounded-3xl">
             Shop now
           </button>
           <Image src={ToysBg} alt="" />

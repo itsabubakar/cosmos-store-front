@@ -27,7 +27,7 @@ const ProductSliderThree = ({ autoPlay, imgSrc, productImage }: Props) => {
   return (
     <div className="text-center bg-white shadow  rounded-lg">
       {/* Video Ad Section */}
-      <div className="relative min-h-[150px] bg-gray-300 mb-4">
+      <div className="relative min-h-[150px]  mb-4">
         {/* Product Image */}
         <Image
           src={productImage}

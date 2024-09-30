@@ -35,15 +35,16 @@ const HorizontalLinkVariantThree = ({
           className="object-cover"
         />
         <div className="inline-flex items-center gap-x-2">
-          <p className="bg-[#08B02D] w-[65px] text-xs text-white inline py-1 rounded-t-sm rounded-bl-sm rounded-br-lg text-center  font-medium mb-2 mt-2 border-b px-1 border-b-[#8F8F8F26]">
+          <p className="bg-[#08B02D] w-[58.41px] text-xs text-white inline py-1 rounded-t-sm rounded-bl-sm rounded-br-lg text-center  font-medium mb-2 mt-2 border-b px-1 border-b-[#8F8F8F26]">
             15% off
           </p>
-          <p className="text-[#08B02D] text-sm">Deal</p>
+          <p className="text-[#08B02D] text-[13px]">Deal</p>
         </div>
 
-        <span className="absolute top-0 -right-5 bg-white  shadow-xl border  text-xs rounded-full  p-1">
-          <Heart />
-        </span>
+        <div className="absolute top-0 -right-5 bg-white/30 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] text-xs rounded-full p-2">
+  <Heart />
+</div>
+
       </Link>
 
       {/* Bottom Link */}
@@ -65,9 +66,9 @@ const HorizontalLinkVariantThree = ({
           <p className="text-[#08B02D] text-sm">Deal</p>
         </div>
 
-        <span className="absolute top-0 -right-5 bg-white  shadow-xl border  text-xs rounded-full  p-1">
-          <Heart />
-        </span>
+        <div className="absolute top-0 -right-5 bg-white/30 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] text-xs rounded-full p-2">
+  <Heart />
+</div>
       </Link>
     </div>
   );

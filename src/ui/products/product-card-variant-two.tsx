@@ -15,15 +15,17 @@ const ProductCardTwo = ({ price, title, imgSrc }: Props) => {
       <div className=" w-full">
         <h3 className="text-sm">{title}</h3>
         <div className="flex justify-between border-[#7F7F7F66] border-b border-dashed pb-2">
-          <p className="text-xl inline-flex ">
-            <span className="text-[11px]">N</span>
-            {price}
+          <p className="text-xl inline-flex gap-x-1 font-semibold">
+            <span className="text-[11px]">N </span>
+             {price}
           </p>
-          <p className="items-end self-end">
+         
+        </div>
+       
+      </div>
+      <p className="items-end self-end">
             <CartPlus />
           </p>
-        </div>
-      </div>
     </div>
   );
 };

@@ -44,7 +44,7 @@ const NavLink = ({
 };
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   // Menu toggle function
   const toggleMenu = () => {
@@ -148,7 +148,7 @@ const Navbar = () => {
 
       {/* Full-screen Mobile Menu */}
       <div
-        className={`fixed h-screen bg-white/80 backdrop-blur-lg inset-0 z-30 flex flex-col space-y-4 transition-transform transition-opacity duration-300 ease-in-out ${
+        className={`fixed h-screen bg-[#FFFFFF33] backdrop-blur-[28px] inset-0 z-30 flex flex-col space-y-4 transition-transform transition-opacity duration-300 ease-in-out ${
           isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
       >
@@ -197,9 +197,9 @@ const Navbar = () => {
               {/* Vertical button on the right */}
               <Link
                 href={"/"}
-                className="bg-white text-[9px] absolute w-[130px] top-[40%] text-black -rotate-90 px-1 justify-between flex  rounded-t-md pb-16"
+                className="bg-white text-[9px]  absolute w-[123px] top-[40%] text-black -rotate-90 px-2  justify-between flex  rounded-t-md pb-[68px]"
               >
-                <p>HOW MAY I HELP YOU</p>
+                <p>MAY I HELP YOU </p>
                 <span className="rotate-90 pt-1">
                   <Care />
                 </span>
